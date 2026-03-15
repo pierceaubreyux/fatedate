@@ -944,6 +944,8 @@ body.nav-open #site-header {
   :root { --phone-scale: 1; }
   .phone-scene { opacity: 0.18; pointer-events: none; }
 
+.phone-ambient {width: 100%;}
+
   .panel {
     width: 90%; max-width: none;
     left: 50% !important; right: auto !important;
