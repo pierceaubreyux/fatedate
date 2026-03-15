@@ -658,8 +658,8 @@ body.nav-open #site-header {
 
 .phone-rotor {
   transform-style: preserve-3d;
-  width: 170px;
-  height: 340px;
+  width: 186px;
+  height: 372px;
   position: relative;
   animation: phoneFloat 7s ease-in-out infinite;
 }
@@ -667,13 +667,14 @@ body.nav-open #site-header {
 .phone-front {
   position: absolute;
   inset: 0;
-  background: #0e0e20;
-  border-radius: 26px;
+  background: linear-gradient(160deg, #12122a 0%, #0a0a18 100%);
+  border-radius: 36px;
   box-shadow:
-    0 0 0 2px #252540,
-    0 40px 100px rgba(0,0,0,0.8),
-    inset 0 1px 0 rgba(255,255,255,0.06);
-  transform: translateZ(9px);
+    0 0 0 1.5px #2e2e50,
+    0 0 0 3px #1a1a30,
+    0 48px 120px rgba(0,0,0,0.9),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  transform: translateZ(11px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -681,9 +682,9 @@ body.nav-open #site-header {
 }
 
 .phone-screen {
-  width: 152px;
-  height: 322px;
-  border-radius: 20px;
+  width: 166px;
+  height: 350px;
+  border-radius: 30px;
   overflow: hidden;
   position: relative;
   background: #000;
@@ -691,20 +692,21 @@ body.nav-open #site-header {
 
 .phone-notch {
   position: absolute;
-  top: 11px; left: 50%;
+  top: 13px; left: 50%;
   transform: translateX(-50%);
-  width: 48px; height: 13px;
-  background: #06060e;
-  border-radius: 7px;
+  width: 36px; height: 10px;
+  background: #04040c;
+  border-radius: 50px;
   z-index: 10;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 .phone-front::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 55%);
-  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, transparent 45%);
+  border-radius: 36px;
   pointer-events: none;
   z-index: 5;
 }
@@ -712,49 +714,104 @@ body.nav-open #site-header {
 .phone-back {
   position: absolute;
   inset: 0;
-  background: linear-gradient(150deg, #0c0c1e 0%, #171730 100%);
-  border-radius: 26px;
-  box-shadow: inset 0 0 0 2px #252540;
-  transform: translateZ(-9px) rotateY(180deg);
+  background: linear-gradient(150deg, #0d0d22 0%, #0a0a18 60%, #0f0f28 100%);
+  border-radius: 36px;
+  box-shadow:
+    inset 0 0 0 1.5px #2a2a48,
+    inset 0 0 0 3px #16162e;
+  transform: translateZ(-11px) rotateY(180deg);
   overflow: hidden;
 }
 .phone-back::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%);
-  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, transparent 50%);
+  border-radius: 36px;
 }
 
 .camera-bump {
   position: absolute;
-  top: 22px; left: 18px;
-  width: 58px; height: 60px;
-  background: #0a0a1c;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.6), inset 0 0 0 1.5px #2a2a44;
+  top: 24px; left: 20px;
+  width: 60px; height: 62px;
+  background: linear-gradient(145deg, #0c0c20, #080814);
+  border-radius: 18px;
+  box-shadow:
+    0 4px 14px rgba(0,0,0,0.7),
+    inset 0 0 0 1px #28284a,
+    inset 0 1px 0 rgba(255,255,255,0.04);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px; padding: 9px;
+  gap: 7px; padding: 10px;
   align-items: center; justify-items: center;
 }
 
 .lens {
-  width: 16px; height: 16px;
+  width: 17px; height: 17px;
   border-radius: 50%;
-  background: radial-gradient(circle at 33% 33%, #20203a, #040408);
-  box-shadow: 0 0 0 2.5px #1c1c30, inset 0 0 5px rgba(160,140,255,0.12);
+  background: radial-gradient(circle at 30% 30%, #1e1e38, #020206);
+  box-shadow:
+    0 0 0 1px #141428,
+    0 0 0 2.5px #1e1e36,
+    inset 0 0 6px rgba(140,120,255,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.06);
 }
-.lens-sm { width: 11px; height: 11px; grid-column: 1/-1; justify-self: start; margin-left: 1px; }
+.lens-sm {
+  width: 11px; height: 11px;
+  grid-column: 1/-1; justify-self: start; margin-left: 2px;
+}
 
-.phone-edge { position: absolute; background: linear-gradient(to bottom, #1c1c34, #28284a, #1c1c34); }
-.edge-left  { width:18px; height:340px; top:0; left: -9px; transform:rotateY(-90deg) translateZ(0); transform-origin:right  center; border-radius:26px 0 0 26px; }
-.edge-right { width:18px; height:340px; top:0; right:-9px; transform:rotateY( 90deg) translateZ(0); transform-origin:left   center; border-radius:0 26px 26px 0; }
+.phone-edge {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.edge-left  {
+  width: 22px; height: 372px; top: 0; left: -11px;
+  transform: rotateY(-90deg) translateZ(0);
+  transform-origin: right center;
+  border-radius: 36px 0 0 36px;
+  background: linear-gradient(to bottom, #181830, #242448, #181830);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+}
+.edge-right {
+  width: 22px; height: 372px; top: 0; right: -11px;
+  transform: rotateY(90deg) translateZ(0);
+  transform-origin: left center;
+  border-radius: 0 36px 36px 0;
+  background: linear-gradient(to bottom, #181830, #242448, #181830);
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.04);
+}
 
-.btn        { position:absolute; background:linear-gradient(to bottom,#282840,#323258,#282840); border-radius:2px; }
-.btn-power  { width:3px; height:46px; right:-11px; top: 95px; }
-.btn-vol1   { width:3px; height:32px; left: -11px; top:108px; }
-.btn-vol2   { width:3px; height:32px; left: -11px; top:150px; }
+/* Buttons live on the edges in 3D space so they stay attached during rotation */
+.btn {
+  position: absolute;
+  background: linear-gradient(to right, #1a1a38, #2a2a50, #1a1a38);
+  border-radius: 3px 0 0 3px;
+  transform-style: preserve-3d;
+}
+/* Power button — sits on right edge, protrudes outward */
+.btn-power {
+  width: 3px; height: 52px;
+  top: 100px; left: -3px;
+  transform: translateZ(2px);
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(to left, #242448, #2e2e58, #242448);
+}
+/* Vol buttons — sit on left edge, protrude outward */
+.btn-vol1 {
+  width: 3px; height: 36px;
+  top: 112px; right: -3px;
+  transform: translateZ(2px);
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(to right, #242448, #2e2e58, #242448);
+}
+.btn-vol2 {
+  width: 3px; height: 36px;
+  top: 158px; right: -3px;
+  transform: translateZ(2px);
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(to right, #242448, #2e2e58, #242448);
+}
 
 #screen-canvas { width:100%; height:100%; display:block; border-radius:20px; }
 
@@ -2195,18 +2252,34 @@ body::before {
   letter-spacing: -0.025em;
 }
 
-/* ── Perk cards — strip heavy white border ── */
 
-.perk1:after {content:""; position: absolute; width: 100px; height: 100px; left:-50px; z-index: 0; top:20px; background-image: url(assets/thread1.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
-.perk2:after {content:""; position: absolute; width: 100px; height: 100px; left:-50px; z-index: 0; top:20px; background-image: url(assets/thread2.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
-.perk3:after {content:""; position: absolute; width: 100px; height: 100px; left:-50px; z-index: 0; top:20px; background-image: url(assets/thread3.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
-.perk4:after {content:""; position: absolute; width: 100px; height: 100px; left:-50px; z-index: 0; top:20px; background-image: url(assets/thread4.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.perks-grid {
+  position: relative;
+}
+
+.thread {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  z-index: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.2;
+}
+.thread-1 { background-image: url(assets/thread1.svg); left: calc(25% * 0 - 50px); }
+.thread-2 { background-image: url(assets/thread2.svg); left: calc(25% * 1 - 50px); }
+.thread-3 { background-image: url(assets/thread3.svg); left: calc(25% * 2 - 50px); }
+.thread-4 { background-image: url(assets/thread4.svg); left: calc(25% * 3 - 50px); }
+
 
 
 
 .perk-card {
-  z-index: 1;
   position: relative;
+  /* No z-index here — removing it stops the card creating a stacking context */
   border: var(--border-subtle) !important;
   border-radius: var(--radius-card);
   background: rgba(255,255,255,0.02);
@@ -2402,18 +2475,17 @@ body::before {
 .process-card {
   position: relative;
 }
-.perk-card::before,
+/*.perk-card::before,
 .process-card::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 180px 180px;
   opacity: 0.018;
   pointer-events: none;
   z-index: 0;
-}
+}*/
 .perk-card > *,
 .process-card > * { position: relative; z-index: 1; }
 

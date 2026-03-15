@@ -427,20 +427,47 @@
 ══════════════════════════════════════ -->
 <header id="site-header">
   <nav class="nav-inner">
-    <a href="../index.html" class="nav-logo">
-      <img src="../assets/logo.svg" alt="FateDate"/>
+
+    <a href="#" class="nav-logo">
+      <img src="assets/logo.svg"/>
+       
     </a>
+
     <ul class="nav-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Venues</a></li>
-      <li><a href="#">Invest</a></li>
-      <li><a href="../blog.html" style="color:#c9b8ff;">Press</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/venues.html">Venues</a></li>
+      <li><a href="/invest.html">Invest</a></li>
+       <li><a href="/press.html">Press</a></li>
+      <li><a href="/Contact.html">Contact</a></li>
     </ul>
-    <a href="#" class="nav-cta">Get early access</a>
+
+    <a href="/sign-up.html" class="nav-cta">Get early access</a>
+
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+
   </nav>
+</header>
+
+
+<!-- Full-screen mobile nav overlay -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <div class="nav-overlay-bg"></div>
+  <div class="nav-overlay-inner">
+    <ul class="nav-overlay-links">
+      <li><a href="/about"><span>About</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/venues"><span>Venues</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/invest"><span>Invest</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/press"><span>Press</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/contact"><span>Contact</span><span class="link-arrow">↗</span></a></li>
+    </ul>
+    <div class="nav-overlay-footer">
+      <span class="nav-overlay-tagline">Connect. Date. Match.</span>
+      <a href="/sign-up.html" class="nav-overlay-cta">Get early access</a>
+    </div>
+  </div>
+</div>
 </header>
 
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
@@ -607,53 +634,120 @@
   </div>
 </section>
 
+
 <!-- ══════════════════════════════════════
      FOOTER
 ══════════════════════════════════════ -->
 <footer id="site-footer">
   <div class="footer-inner">
+
     <div class="footer-top">
+
+      <!-- Logo -->
       <div class="footer-brand">
-        <a href="../index.html" class="footer-logo">
-          <img src="../assets/logo.svg" alt="FateDate" />
+        <a href="#" class="footer-logo">
+          <img src="assets/logo.svg" alt="FateDate" />
         </a>
       </div>
+
+      <!-- Nav columns -->
       <nav class="footer-nav">
+
         <div class="footer-col">
-          <a href="#">About</a>
-          <a href="#">Venues</a>
-          <a href="#">Download</a>
-          <a href="../blog.html">News</a>
-          <a href="#">Dating laws</a>
+          <a href="/about.html">About</a>
+          <a href="/venues.html">Venues</a>
+          <a href="/invest.html">Invest</a>
+          <a href="/press.html">Press</a>
+          <a href="/sign-up.html">Get early access</a>
+          <a href="/dating-laws.html">Dating laws</a>
         </div>
+
         <div class="footer-col">
-          <a href="#">TikTok</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">Youtube</a>
+          <a href="https://www.tiktok.com/@fatedateapp?_t=8VJpOkbXWUv&_r=1">TikTok</a>
+          <a href="https://www.facebook.com/FateDateAPP">LinkedIn</a>
+          <a href="https://www.instagram.com/fatedateapp/">Instagram</a>
         </div>
+
         <div class="footer-col">
-          <a href="mailto:hello@fatedate.co.uk" class="footer-email">hello@fatedate.co.uk</a>
-          <a href="#">Terms &amp; conditions</a>
-          <a href="#">Privacy policy</a>
-          <a href="#">Safety tips</a>
-          <a href="#">Help centre</a>
+          <a href="mailto:hello@fatedate.co.uk" class="footer-email"><span class="__cf_email__" data-cfemail="a0c8c5cccccfe0c6c1d4c5c4c1d4c58ec3cf8ed5cb"><span class="__cf_email__" data-cfemail="2e464b4242416e484f5a4b4a4f5a4b004d4143">hello@fatedate.co.uk</span></span></a>
+          <a href="/terms.html">Terms &amp; conditions</a>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/safety.html">Safety tips</a>
+          <!-- <a href="/help.html">Help centre</a> -->
         </div>
+
       </nav>
     </div>
+
+    <!-- Ribbon + copyright bar -->
     <div class="footer-bottom">
       <p class="footer-copy">Copyright &copy; 2026 Fate Date. All rights reserved.</p>
       <div class="footer-ribbon" aria-hidden="true">
-        <svg viewBox="0 0 700 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-          <path d="M20 90 C80 90 100 40 160 55 C220 70 230 100 290 85 C330 75 340 30 390 45 C430 58 435 95 480 80 C520 67 530 20 580 35 C620 47 640 88 690 75" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
-        </svg>
-      </div>
-    </div>
-  </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="611" height="98" viewBox="0 0 611 98" fill="none">
+  <path d="M0.893555 81.1215C6.8029 76.7382 9.98486 71.6626 33.6223 69.9284C63.4425 67.7406 119.86 56.5476 114.08 4.86997C113.664 1.14745 109.535 0.71677 107.262 2.56268C97.716 6.48466 74.9877 37.5183 98.1705 50.8992C105.365 55.0519 129.536 74.8925 161.355 66.8179C188.827 59.8464 203.266 15.0672 247.268 18.943C285.603 25.0182 452.822 37.1031 518.643 66.8179C600.92 103.961 674.513 103.269 742.243 81.1215C809.973 58.9739 925.888 2.79365 1060.89 24.7106" stroke="white" stroke-width="3"/>
+</svg>
+</div>
+</div>
+</div>
 </footer>
+</body>
+</html>
+
 
 <script>
+/* ═══════════════════════════════════════
+   MOBILE NAV OVERLAY
+═══════════════════════════════════════ */
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var overlay   = document.getElementById('nav-overlay');
+  if (!hamburger || !overlay) return;
+
+  function openNav() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('nav-open');
+  }
+
+  function closeNav() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    document.body.classList.remove('nav-open');
+  }
+
+  hamburger.addEventListener('click', function() {
+    overlay.classList.contains('open') ? closeNav() : openNav();
+  });
+
+  // Close on link click
+  overlay.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', closeNav);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+
+/* ═══════════════════════════════════════
+   HEADER SCROLL STATE
+═══════════════════════════════════════ */
+(function() {
+  var header = document.getElementById('site-header');
+  if (!header) return;
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.pageYOffset > 40);
+  }, { passive: true });
+})();
+
+  
 /* ── Header scroll state ── */
 (function() {
   var h = document.getElementById('site-header');
