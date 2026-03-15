@@ -592,12 +592,12 @@ body.nav-open #site-header {
 .glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(50px);
+  filter: blur(80px);
   pointer-events: none;
   transition: opacity 1.2s ease;
 }
-.glow-1 { width:500px; height:500px; background:radial-gradient(circle,rgba(58,31,110,.75) 0%,transparent 100%); top:5%;    left:0; will-change: transform; }
-.glow-2 { width:500px; height:400px; background:radial-gradient(circle,rgba(13,61,58,.65)  0%,transparent 100%); top:40%;   right:0; will-change: transform; }
+.glow-1 { width:500px; height:500px; background:radial-gradient(circle,rgba(58,31,110,.75) 0%,transparent 100%); top:5%;    left:0; }
+.glow-2 { width:500px; height:400px; background:radial-gradient(circle,rgba(13,61,58,.65)  0%,transparent 100%); top:40%;   right:0; }
 .glow-3 { width:400px; height:400px; background:radial-gradient(circle,rgba(58,31,110,.55) 0%,transparent 100%); bottom:5%; left:5%; }
 
 /* Per-step ambient light around the phone */
@@ -609,7 +609,7 @@ body.nav-open #site-header {
   height: 700px;
   transform: translate(-50%, -50%) scale(var(--phone-scale));
   border-radius: 50%;
-  filter: blur(28px);
+  filter: blur(60px);
   pointer-events: none;
   z-index: 1;
   background: radial-gradient(ellipse, rgba(123,46,253,0.2) 0%, transparent 70%);
@@ -649,7 +649,6 @@ body.nav-open #site-header {
   perspective: 1200px;
   z-index: 2;
   transform: translate(-50%, -50%) scale(var(--phone-scale));
-  will-change: transform;
 }
 
 @keyframes phoneFloat {
@@ -663,7 +662,6 @@ body.nav-open #site-header {
   height: 372px;
   position: relative;
   animation: phoneFloat 7s ease-in-out infinite;
-  will-change: transform;
 }
 
 .phone-front {
@@ -983,8 +981,6 @@ body.nav-open #site-header {
   color: var(--light);
   padding: 120px 0;
   position: relative;
-  content-visibility: auto;
-  contain-intrinsic-size: 0 800px;
 }
 
 /*#safety-section::before {
@@ -1049,11 +1045,10 @@ body.nav-open #site-header {
 /* Scroll reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s cubic-bezier(.22,1,.36,1), transform 0.5s cubic-bezier(.22,1,.36,1);
-  will-change: opacity, transform;
+  transform: translateY(28px);
+  transition: opacity 0.85s cubic-bezier(.22,1,.36,1), transform 0.85s cubic-bezier(.22,1,.36,1);
 }
-.reveal.visible { opacity: 1; transform: none; will-change: auto; }
+.reveal.visible { opacity: 1; transform: none; }
 .reveal-delay-1 { transition-delay: 0.08s; }
 .reveal-delay-2 { transition-delay: 0.16s; }
 .reveal-delay-3 { transition-delay: 0.24s; }
@@ -1302,7 +1297,7 @@ body.nav-open #site-header {
 }
 
 
-#venues-section {padding:0 20px; margin-bottom: 40px; content-visibility: auto; contain-intrinsic-size: 0 1200px;}
+#venues-section {padding:0 20px; margin-bottom: 40px;}
 .venues-container {background:var(--black); border-radius: 25px; padding: 60px 40px; color:var(--white);}
 .venues-container .section-header {max-width: 800px; margin:auto;}
 .section-header p {margin-bottom: 20px;}
@@ -1852,7 +1847,7 @@ body.cursor-hover #cursor-ring {
 
 
 
-#lower-third {position: relative; content-visibility: auto; contain-intrinsic-size: 0 1000px;}
+#lower-third {position: relative;}
 /* ════════════════════════
    PERKS GRID
 ════════════════════════ */
@@ -2129,7 +2124,7 @@ body::before {
   width: 900px;
   height: 900px;
   background: radial-gradient(circle, rgba(123,46,253,0.18) 0%, rgba(71,95,219,0.1) 35%, transparent 70%);
-  filter: blur(28px);
+  filter: blur(40px);
   transition: left 1.4s var(--ease-spring), top 1.4s var(--ease-spring);
 }
 
@@ -2418,15 +2413,14 @@ body::before {
 /* Scroll-driven fade reveal — fd system */
 .fd-reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.55s var(--ease-spring), transform 0.55s var(--ease-spring);
-  will-change: opacity, transform;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease-spring), transform 0.9s var(--ease-spring);
 }
-.fd-reveal.fd-visible { opacity: 1; transform: none; will-change: auto; }
-.fd-delay-1 { transition-delay: 0.06s; }
-.fd-delay-2 { transition-delay: 0.12s; }
-.fd-delay-3 { transition-delay: 0.18s; }
-.fd-delay-4 { transition-delay: 0.24s; }
+.fd-reveal.fd-visible { opacity: 1; transform: none; }
+.fd-delay-1 { transition-delay: 0.08s; }
+.fd-delay-2 { transition-delay: 0.18s; }
+.fd-delay-3 { transition-delay: 0.28s; }
+.fd-delay-4 { transition-delay: 0.38s; }
 
 
 
@@ -2643,7 +2637,7 @@ body::before {
   height: 760px;
   transform: translate(-50%, -50%) scale(var(--phone-scale));
   border-radius: 50%;
-  filter: blur(28px);
+  filter: blur(100px);
   pointer-events: none;
   z-index: 1;
   background: radial-gradient(ellipse, rgba(123,46,253,0.28) 0%, rgba(71,95,219,0.1) 35%, transparent 70%);
