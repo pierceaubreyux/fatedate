@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/enb0aud.css">
+  <title>FateDate</title>
+</head>
+<body>
+
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<!-- ══════════════════════════════════════
+     LOADING SCREEN
+     Swap .loader-graphic contents for your logo/mark
+══════════════════════════════════════ -->
+<div id="loader">
+  <div class="loader-graphic">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="102" viewBox="0 0 27 29" fill="none">
+      <defs>
+        <linearGradient id="paint0_linear_825_5320" x1="13.3568" y1="0" x2="13.3568" y2="28.9476" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#7B2EFD"/>
+          <stop offset="0.485577" stop-color="#475FDB"/>
+          <stop offset="1" stop-color="#02A0AE"/>
+        </linearGradient>
+      </defs>
+      <!-- Fill: hidden at start, fades in after stroke finishes -->
+      <path class="icon-fill" fill-rule="evenodd" clip-rule="evenodd" d="M9.09219 26.1485C10.5908 20.643 17.4024 18.2078 20.7913 18.0923C22.2384 14.9706 24.7245 7.83492 23.0925 4.26596C22.6538 3.09445 19.8438 0.67582 17.1945 4.95415C16.6354 5.72736 15.3304 8.28153 14.8934 12.3125C14.8005 13.1691 14.6578 13.7996 13.5362 13.7996C12.4901 13.7996 12.2358 12.8199 12.1743 12.3952C12.1699 12.3645 12.1659 12.3368 12.162 12.3125C11.8622 10.4501 10.8374 7.64916 9.2662 5.95034C8.12233 4.71352 5.81931 4.79053 4.87179 5.56053C3.62452 6.57412 3.46499 9.44904 4.56721 11.3644C5.95628 11.1848 9.20335 11.9323 11.0791 16.3598C12.0105 18.5607 12.6551 22.8168 9.09219 21.8028C5.49058 20.7777 3.20877 14.4685 3.06857 14.0306C2.77529 14.2118 2.06883 14.7438 1.58926 15.4214C1.10969 16.099 0.580491 15.9796 0.375837 15.8353C0.0922215 15.662 -0.30484 15.0826 0.375837 14.1509C0.913299 13.4152 1.45352 13.0106 1.94917 12.6394L1.94921 12.6393C2.08127 12.5404 2.21016 12.4439 2.33499 12.3441C1.50832 10.7924 0.323625 6.91092 3.2281 3.99646C4.87179 2.58639 8.70542 1.21675 11.49 5.17071C12.0621 6.02253 13.3621 8.08999 13.5362 9.5453C13.35 7.98878 14.5182 3.20143 17.1945 1.15707C18.5772 0.0517978 22.0888 -1.24341 25.0745 2.41795C28.0602 6.07932 25.1615 14.6498 23.339 18.4773C24.1898 18.7436 26.0453 19.641 26.6602 21.1002C26.7343 21.3279 26.7888 21.8923 26.4136 22.3273C25.8297 22.9241 25.3034 22.576 25.1132 22.3273C24.1541 20.8297 22.6122 20.3687 21.9612 20.3253C18.6545 25.3352 15.4319 27.854 13.4093 28.5933C11.3866 29.3325 10.4555 28.7391 9.95754 28.3959C9.1531 27.8415 8.9114 26.8126 9.09219 26.1485ZM4.91045 13.7996C4.85889 13.5718 4.90515 13.1851 5.49058 13.1306C6.80677 13.0082 9.09219 15.4214 9.91401 17.356C10.5614 18.8801 10.5264 19.5544 10.506 19.9464C10.503 20.0056 10.5002 20.0584 10.5002 20.1067C10.5179 20.2992 10.1277 20.7026 9.66745 20.5371C9.09219 20.3302 6.29791 18.1934 4.91045 13.7996ZM11.2338 25.5758C14.2843 21.4274 18.3645 20.4938 19.8389 20.1762C16.8416 24.3111 13.7493 26.487 12.6551 27.0051C12.3489 27.2024 11.5849 27.5292 11.0791 27.1254C10.5667 26.7164 10.9631 25.9351 11.2338 25.5758Z" fill="url(#paint0_linear_825_5320)"/>
+      <!-- Stroke: draws on, then fades out as fill takes over -->
+      <path class="icon-stroke" fill-rule="evenodd" clip-rule="evenodd" d="M9.09219 26.1485C10.5908 20.643 17.4024 18.2078 20.7913 18.0923C22.2384 14.9706 24.7245 7.83492 23.0925 4.26596C22.6538 3.09445 19.8438 0.67582 17.1945 4.95415C16.6354 5.72736 15.3304 8.28153 14.8934 12.3125C14.8005 13.1691 14.6578 13.7996 13.5362 13.7996C12.4901 13.7996 12.2358 12.8199 12.1743 12.3952C12.1699 12.3645 12.1659 12.3368 12.162 12.3125C11.8622 10.4501 10.8374 7.64916 9.2662 5.95034C8.12233 4.71352 5.81931 4.79053 4.87179 5.56053C3.62452 6.57412 3.46499 9.44904 4.56721 11.3644C5.95628 11.1848 9.20335 11.9323 11.0791 16.3598C12.0105 18.5607 12.6551 22.8168 9.09219 21.8028C5.49058 20.7777 3.20877 14.4685 3.06857 14.0306C2.77529 14.2118 2.06883 14.7438 1.58926 15.4214C1.10969 16.099 0.580491 15.9796 0.375837 15.8353C0.0922215 15.662 -0.30484 15.0826 0.375837 14.1509C0.913299 13.4152 1.45352 13.0106 1.94917 12.6394L1.94921 12.6393C2.08127 12.5404 2.21016 12.4439 2.33499 12.3441C1.50832 10.7924 0.323625 6.91092 3.2281 3.99646C4.87179 2.58639 8.70542 1.21675 11.49 5.17071C12.0621 6.02253 13.3621 8.08999 13.5362 9.5453C13.35 7.98878 14.5182 3.20143 17.1945 1.15707C18.5772 0.0517978 22.0888 -1.24341 25.0745 2.41795C28.0602 6.07932 25.1615 14.6498 23.339 18.4773C24.1898 18.7436 26.0453 19.641 26.6602 21.1002C26.7343 21.3279 26.7888 21.8923 26.4136 22.3273C25.8297 22.9241 25.3034 22.576 25.1132 22.3273C24.1541 20.8297 22.6122 20.3687 21.9612 20.3253C18.6545 25.3352 15.4319 27.854 13.4093 28.5933C11.3866 29.3325 10.4555 28.7391 9.95754 28.3959C9.1531 27.8415 8.9114 26.8126 9.09219 26.1485ZM4.91045 13.7996C4.85889 13.5718 4.90515 13.1851 5.49058 13.1306C6.80677 13.0082 9.09219 15.4214 9.91401 17.356C10.5614 18.8801 10.5264 19.5544 10.506 19.9464C10.503 20.0056 10.5002 20.0584 10.5002 20.1067C10.5179 20.2992 10.1277 20.7026 9.66745 20.5371C9.09219 20.3302 6.29791 18.1934 4.91045 13.7996ZM11.2338 25.5758C14.2843 21.4274 18.3645 20.4938 19.8389 20.1762C16.8416 24.3111 13.7493 26.487 12.6551 27.0051C12.3489 27.2024 11.5849 27.5292 11.0791 27.1254C10.5667 26.7164 10.9631 25.9351 11.2338 25.5758Z" fill="none" stroke="url(#paint0_linear_825_5320)" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <p class="loader-wordmark">FateDate</p>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+
+
+
+<header id="site-header">
+  <nav class="nav-inner">
+
+    <a href="#" class="nav-logo">
+      <img src="assets/logo.svg"/>
+       
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/about">About</a></li>
+      <li><a href="/venues">Venues</a></li>
+      <li><a href="/invest">Invest</a></li>
+       <li><a href="/press">Press</a></li>
+      <li><a href="/Contact">Contact</a></li>
+    </ul>
+
+    <a href="/sign-up" class="nav-cta">Get early access</a>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </nav>
+</header>
+
+<!-- Full-screen mobile nav overlay -->
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <div class="nav-overlay-bg"></div>
+  <div class="nav-overlay-inner">
+    <ul class="nav-overlay-links">
+      <li><a href="/about"><span>About</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/venues"><span>Venues</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/invest"><span>Invest</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/press"><span>Invest</span><span class="link-arrow">↗</span></a></li>
+      <li><a href="/contact"><span>Contact</span><span class="link-arrow">↗</span></a></li>
+    </ul>
+    <div class="nav-overlay-footer">
+      <span class="nav-overlay-tagline">Connect. Date. Match.</span>
+      <a href="/sign-up" class="nav-overlay-cta">Get early access</a>
+    </div>
+  </div>
+</div>
+</header>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<div id="hero">
+  <div class="hero-video-container" id="hero-container">
+
+    <div class="hero-video" id="hero-video-wrap">
+      <video autoplay muted loop playsinline id="hero-vid">
+        <source src="assets/test-vid.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Cursor-tracking colour orb -->
+    <div class="hero-orb" id="hero-orb"></div>
+
+    <!-- Floating proof chips — anchored to hero viewport -->
+    <div class="hero-chips">
+      <div class="hero-chip chip-1">
+        <span class="chip-live"></span>
+        <span>2,400+ on the waitlist</span>
+      </div>
+      <div class="hero-chip chip-2">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>ID-verified members only</span>
+      </div>
+    </div>
+
+    <!-- Scroll hint — bottom right -->
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"><div class="hero-scroll-runner"></div></div>
+    </div>
+
+    <!-- Content inside max-width container -->
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow"><span>Early access coming soon</span></div>
+        <h1><span class="hw"><span class="hwi">Connect online. Date in person. Match for real.</span></span>
+          <!-- <span class="hw"><span class="hwi">Connect</span></span><br>
+          <span class="hw"><span class="hwi">Date</span></span><br>
+          <span class="hw"><span class="hwi">Match</span></span> -->
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <div class="cta-container">
+          <a href="/sign-up"><div class="cta cta-gradient gradient">Get early access</div></a>
+          <a href="/venues"><div class="cta cta-dark">Become a venue</div></a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Animated border line draws across bottom on load -->
+   <!--  <div class="hero-draw-line"></div> -->
+
+    <div id="fate-ribbon-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="113" viewBox="0 0 1240 113" fill="none">
+        <path d="M-119 109.617C-108.949 103.665 -103.536 96.7733 -63.3303 94.4184C-12.6078 91.4476 83.3559 76.2486 73.5243 6.07588C72.8161 1.02109 65.7924 0.436273 61.9264 2.94283C45.6894 8.26847 7.02995 50.4089 46.4626 68.5788C58.7004 74.2177 99.8127 101.159 153.936 90.1946C200.665 80.7281 225.224 19.9226 300.069 25.1856C365.275 33.4351 649.705 49.845 761.663 90.1946C901.611 140.632 1026.79 139.692 1141.99 109.617C1257.2 79.5433 1454.36 3.25646 1684 33.0174" stroke="white" stroke-width="3"/>
+      </svg>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     3D SCROLL SECTION
+══════════════════════════════════════ -->
+<section id="scroll-section">
+
+  <!-- Glow wrap is a SIBLING of sticky-wrap, not ancestor — safe to overflow:hidden -->
+  <div class="glow-wrap">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <!-- Particle field canvas — sticky so it stays in viewport -->
+  <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+  <div class="sticky-wrap">
+    <div class="scroll-container">
+
+      <!-- Ambient colour glow around phone -->
+      <div class="phone-ambient" id="phone-ambient"></div>
+
+      <!-- Phone -->
+      <div class="phone-scene" id="phone-scene">
+        <div class="phone-rotor" id="phone-rotor">
+          <div class="phone-front">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <canvas id="screen-canvas" width="304" height="644"></canvas>
+            </div>
+            <div class="phone-glint" id="phone-glint"></div>
+          </div>
+          <div class="phone-back">
+            <div class="camera-bump">
+              <div class="lens"></div>
+              <div class="lens"></div>
+              <div class="lens lens-sm"></div>
+            </div>
+          </div>
+          <div class="phone-edge edge-left"></div>
+          <div class="phone-edge edge-right"></div>
+          <div class="btn btn-power"></div>
+          <div class="btn btn-vol1"></div>
+          <div class="btn btn-vol2"></div>
+        </div>
+      </div>
+
+      <!-- LEFT panel -->
+      <div class="panel panel-left">
+        <div class="step" data-step="1">
+          <span class="step-ghost">02</span>
+          <svg class="squiggle squiggle1" width="72" height="36" xmlns="http://www.w3.org/2000/svg" width="165" height="62" viewBox="0 0 165 62" fill="none">
+<path d="M163.261 21.8148C162.374 21.8934 160.387 21.8122 159.53 20.8587C158.46 19.6669 154.392 17.9364 147.322 22.8524C141.666 26.7853 133.222 31.9303 129.707 34.0112C126.569 36.1123 119.135 39.3448 114.501 35.4663C110.171 31.8413 112.613 26.773 114.698 24.2638C114.974 23.9308 115.3 23.6437 115.643 23.3799L117.424 22.0118C117.733 21.7742 118.058 21.5618 118.396 21.3664C124.445 17.8632 134.402 9.89136 129.436 3.74241C124.329 -2.58185 109.652 5.96089 102.952 11.0228L95.8613 16.3159L78.9598 28.2692C69.9299 34.467 51.7217 50.2555 58.8468 57.825C66.7191 66.1882 79.2634 43.7908 56.8733 45.2395C54.2168 45.4114 50.025 46.0074 45.8365 46.5396C40.741 47.1869 29.3589 50.5738 22.7794 39.2544L17.3918 26.8643C16.2694 24.283 11.5196 19.2889 1.49958 19.9627" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>
+          <div class="step-eyebrow"><strong>02</strong><span class="sub">Make the right</span></div>
+          <h2 class="step-title">connection</h2>
+          <p class="step-body">Take part in connection based games to find the fate you were destined for.</p>
+        </div>
+        <div class="step" data-step="3">
+          <span class="step-ghost">04</span>
+          <svg class="squiggle squiggle2" width="72" height="36" xmlns="http://www.w3.org/2000/svg" width="163" height="60" viewBox="0 0 163 60" fill="none">
+<path d="M160.538 17.0987C135.683 4.26482 55.6148 15.4771 47.1541 32.0742M47.1541 32.0742C45.6303 35.0635 42.3957 38.9602 41.7128 42.9244C39.8353 49.2653 49.2828 54.4626 51.7579 45.8684C52.6242 42.8604 52.3905 35.4477 47.1541 32.0742ZM47.1541 32.0742C43.3784 28.8667 10.0518 31.9725 3.02477 48.0011" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+          <div class="step-eyebrow"><strong>04</strong><span class="sub">Hit it off?</span></div>
+          <h2 class="step-title">make a real match</h2>
+          <p class="step-body">Match when it matters. If things genuinely feel right then upgrade to a match and unlock extra features.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT panel -->
+      <div class="panel panel-right">
+        <div class="step active from-right" data-step="0">
+          <span class="step-ghost">01</span>
+          <svg class="squiggle squiggle3" width="72" height="36" xmlns="http://www.w3.org/2000/svg" width="116" height="76" viewBox="0 0 116 76" fill="none">
+<path d="M90.8828 1.50012C94.0262 3.5549 98.673 11.5275 92.1128 26.9794C90.0627 31.6369 87.6846 42.8423 94.5729 50.4039C101.461 57.9655 107.83 57.1162 110.153 55.7463C113.433 53.8285 118.026 47.6916 110.153 38.4862C102.281 29.2808 82.8192 39.3081 74.0722 45.4724L63.0019 55.7463C58.6284 59.5819 47.8314 66.1024 39.6312 61.4997C31.4309 56.897 29.3809 52.0477 32.2509 47.1163C37.5811 43.0067 49.0615 45.8012 37.5811 65.1983C34.301 69.5819 22.4926 77.3626 1.5 73.4175" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>
+          <div class="step-eyebrow"><strong>01</strong><span class="sub">Before you begin</span></div>
+          <h2 class="step-title">verify your identity</h2>
+          <p class="step-body">Your safety comes first. Every member is ID-verified before joining, so you always know exactly who you're talking to.</p>
+        </div>
+        <div class="step from-right" data-step="2">
+          <span class="step-ghost">03</span>
+          <svg class="squiggle squiggle1" width="72" height="36" xmlns="http://www.w3.org/2000/svg" width="165" height="62" viewBox="0 0 165 62" fill="none">
+<path d="M163.261 21.8148C162.374 21.8934 160.387 21.8122 159.53 20.8587C158.46 19.6669 154.392 17.9364 147.322 22.8524C141.666 26.7853 133.222 31.9303 129.707 34.0112C126.569 36.1123 119.135 39.3448 114.501 35.4663C110.171 31.8413 112.613 26.773 114.698 24.2638C114.974 23.9308 115.3 23.6437 115.643 23.3799L117.424 22.0118C117.733 21.7742 118.058 21.5618 118.396 21.3664C124.445 17.8632 134.402 9.89136 129.436 3.74241C124.329 -2.58185 109.652 5.96089 102.952 11.0228L95.8613 16.3159L78.9598 28.2692C69.9299 34.467 51.7217 50.2555 58.8468 57.825C66.7191 66.1882 79.2634 43.7908 56.8733 45.2395C54.2168 45.4114 50.025 46.0074 45.8365 46.5396C40.741 47.1869 29.3589 50.5738 22.7794 39.2544L17.3918 26.8643C16.2694 24.283 11.5196 19.2889 1.49958 19.9627" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</svg>
+          <div class="step-eyebrow"><strong>03</strong><span class="sub">Have a chat and</span></div>
+          <h2 class="step-title">go on a date</h2>
+          <p class="step-body">Chat with each other and arrange a first date at exclusive venues through our DateDiary.</p>
+        </div>
+      </div>
+
+      <!-- Progress dots -->
+      <div class="progress-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+
+
+
+
+
+
+    </div><!-- /.scroll-container -->
+  </div><!-- /.sticky-wrap -->
+  <div id="fate-ribbon-full">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1240" height="113" viewBox="0 0 1240 113" fill="none">
+        <path d="M-119 109.617C-108.949 103.665 -103.536 96.7733 -63.3303 94.4184C-12.6078 91.4476 83.3559 76.2486 73.5243 6.07588C72.8161 1.02109 65.7924 0.436273 61.9264 2.94283C45.6894 8.26847 7.02995 50.4089 46.4626 68.5788C58.7004 74.2177 99.8127 101.159 153.936 90.1946C200.665 80.7281 225.224 19.9226 300.069 25.1856C365.275 33.4351 649.705 49.845 761.663 90.1946C901.611 140.632 1026.79 139.692 1141.99 109.617C1257.2 79.5433 1454.36 3.25646 1684 33.0174" stroke="white" stroke-width="3"/>
+      </svg>
+    </div>
+</section>
+
+
+
+
+<!-- ══════════════════════════════════════
+     SAFETY FIRST SECTION
+══════════════════════════════════════ -->
+<section id="safety-section">
+  <div class="safety-container">
+
+    <div class="section-header fd-reveal fd-fade-up">
+      <div class="section-eyebrow-pill">our motto</div>
+      <h2 class="section-title">Safety first</h2>
+    </div>
+
+    <div class="safety-grid">
+
+      <!-- Left: app card with visible border -->
+      <div class="safety-app-card fd-reveal fd-slide-left fd-delay-1">
+        <div class="app-card-header">
+          <div class="app-card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+            </svg>
+          </div>
+          <div>
+            <p class="app-card-label">Date Diaries</p>
+            <p class="app-card-sub">This is dummy text for you to replace it should fill this space.</p>
+          </div>
+        </div>
+        <div class="app-card-photos">
+          <div class="photo-slot"><img src="assets/person1.jpg" alt="" onerror="this.style.background='#2a1a3a';this.removeAttribute('src')"/></div>
+          <div class="photo-slot"><img src="assets/person2.png" alt="" onerror="this.style.background='#1a2030';this.removeAttribute('src')"/></div>
+          <div class="photo-slot photo-slot-fade"><img src="assets/person3.png" alt="" onerror="this.style.background='#101828';this.removeAttribute('src')"/></div>
+        </div>
+      </div>
+
+      <!-- Right: copy + video card -->
+      <div class="safety-copy fd-reveal fd-slide-right fd-delay-2">
+        <h3 class="safety-heading">The facts on safe dating?</h3>
+        <p class="safety-body">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour or randomised words which don't look even slightly believable.</p>
+
+        <div class="safety-video-card fd-reveal fd-fade-up fd-delay-3">
+          <div class="safety-video-thumb">
+            <img src="assets/safety-thumb.jpg" alt="" onerror="this.style.background='linear-gradient(135deg,#1a3a5c,#0d2035)';this.removeAttribute('src')"/>
+            <button class="play-btn" aria-label="Play video">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+            </button>
+          </div>
+          <div class="safety-video-copy">
+            <p class="safety-video-title">What makes us different?</p>
+            <p class="safety-video-body">Take a look inside some of the stories from our members. See how end to end dating is done successfully with Fate Date.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     PERKS SECTION
+══════════════════════════════════════ -->
+<section id="perks-section">
+  <div class="safety-container">
+
+    <div class="section-header fd-reveal fd-fade-up">
+      <div class="section-eyebrow-pill">FateDate perks</div>
+      <h2 class="section-title">What are you waiting for?</h2>
+    </div>
+
+    <div class="perks-grid">
+      <div class="perk-card perk1 fd-reveal fd-scale-up fd-delay-1">
+        <div class="perk-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="perk-title">Safer dating</p>
+          <p class="perk-body">This is dummy text replace it.</p>
+        </div>
+      </div>
+
+      <div class="perk-card perk2 fd-reveal fd-scale-up fd-delay-2">
+        <div class="perk-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+          </svg>
+        </div>
+        <div>
+          <p class="perk-title">Verified users</p>
+          <p class="perk-body">This is dummy text replace it.</p>
+        </div>
+      </div>
+
+      <div class="perk-card perk3 fd-reveal fd-scale-up fd-delay-3">
+        <div class="perk-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="perk-title">True matches</p>
+          <p class="perk-body">This is dummy text replace it.</p>
+        </div>
+      </div>
+
+      <div class="perk-card perk4 fd-reveal fd-scale-up fd-delay-4">
+        <div class="perk-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="perk-title">Discounts</p>
+          <p class="perk-body">This is dummy text replace it.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="venues-section">
+  <div class="container venues-container">
+       <div class="section-header fd-reveal fd-fade-up">
+      <div class="section-eyebrow-pill">our venues</div>
+      <h2 class="section-title">Select from a list of venues</h2>
+      <p>There are many variations of passages of Lorem Ipsum available, but  the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+      <a href="/venues"><div class="cta cta-gradient gradient">Become a venue</div></a>
+    </div>
+
+    <div class="venues-grid">
+
+      <div class="venue-card">
+        <div class="venue-card-inner">
+          <p class="venue-eyebrow"><strong>01</strong> Activities</p>
+          <h2 class="venue-title">Visit the great outdoors.</h2>
+          <p class="venue-body">This is a placeholder text, use this entire space to explain the benefits of planning your Fate Date, and selecting from our long list of verified venues.</p>
+          <a href="/about" class="venue-btn">See our activities</a>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-inner">
+          <p class="venue-eyebrow"><strong>02</strong> Restaurants</p>
+          <h2 class="venue-title">A safe bite to eat.</h2>
+          <p class="venue-body">This is a placeholder text, use this entire space to explain the benefits of planning your Fate Date, and selecting from our long list of verified venues.</p>
+          <a href="/venues" class="venue-btn">See our activities</a>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-inner">
+          <p class="venue-eyebrow"><strong>03</strong> Bars</p>
+          <h2 class="venue-title">Good company and drinks</h2>
+          <p class="venue-body">This is a placeholder text, use this entire space to explain the benefits of planning your Fate Date, and selecting from our long list of verified venues.</p>
+           <a href="/sign-up" class="venue-btn">See our activities</a>
+        </div>
+      </div>
+
+      <div class="venue-card">
+        <div class="venue-card-inner">
+          <p class="venue-eyebrow"><strong>04</strong> More</p>
+          <h2 class="venue-title">Coming soon</h2>
+          <p class="venue-body">This is a placeholder text, use this entire space to explain the benefits of planning your Fate Date, and selecting from our long list of verified venues.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="section-header fd-reveal fd-fade-up">
+      <div class="section-eyebrow-pill">true matches</div>
+      <h2 class="section-title">The perfect match</h2>
+      <p>There are many variations of passages of Lorem Ipsum available, but  the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+    </div>
+
+    <!-- Scroll-driven image carousel -->
+    <div class="img-carousel-wrap" id="img-carousel-wrap">
+      <div class="img-carousel-track" id="img-carousel-track">
+        <div class="img-carousel-item image1"></div>
+        <div class="img-carousel-item image2"></div>
+        <div class="img-carousel-item image3"></div>
+        <div class="img-carousel-item image4"></div>
+        <div class="img-carousel-item image5"></div>
+        <div class="img-carousel-item image1"></div>
+      </div>
+    </div>
+
+     
+
+  </div>
+</section>
+
+
+    <section id="lower-third">
+
+       <div class="glow-wrap">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+    <div class="section-header fd-reveal fd-fade-up section-crop">
+      <div class="section-eyebrow-pill">verified users</div>
+      <h2 class="section-title">Chat with verified users, no hidden surprises</h2>
+      <p>There are many variations of passages of Lorem Ipsum available, but  the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+    </div>
+
+
+  <div id="fate-ribbon-relative">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="132" viewBox="0 0 1280 132" fill="none">
+<path d="M1399 109.618C1388.95 103.665 1383.54 96.7735 1343.33 94.4186C1292.61 91.4478 1196.64 76.2488 1206.48 6.07606C1207.18 1.02127 1214.21 0.436456 1218.07 2.94301C1234.31 8.26865 1272.97 50.4091 1233.54 68.5789C1221.3 74.2178 1180.19 101.159 1126.06 90.1948C1079.34 80.7283 1054.78 19.9228 979.931 25.1858C914.725 33.4353 630.295 49.8452 518.337 90.1948C378.389 140.632 253.212 139.692 138.006 109.618C22.801 79.5435 -174.363 3.25664 -404 33.0176" stroke="white" stroke-width="3"/>
+</svg>
+    </div>
+
+
+
+        <div class="section-header fd-reveal fd-fade-up section-crop">
+      <div class="section-eyebrow-pill">holistic dating</div>
+      <h2 class="section-title">The world’s first end to end dating experience</h2>
+      <p>There are many variations of passages of Lorem Ipsum available, but  the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+    </div>
+
+<div class="container">
+
+    <div class="process-grid">
+       <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">Pull your fate string</p>
+          <p class="process-body">Take part in fate driven connection games to find your perfect connection.</p>
+        </div>
+      </div>
+
+      <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">DateDiary</p>
+          <p class="process-body">Scheudle and arrange dates via our DateDiary features.</p>
+        </div>
+      </div>
+
+      <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">BlindDates</p>
+          <p class="process-body">Fully go with Fate by using our BlindDates feature and get connected with users who match your vibes.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="process-grid">
+       <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">Select your date venue</p>
+          <p class="process-body">Select venues based on your local location and that are fully vetted by us and include exclusive discount offers.</p>
+        </div>
+      </div>
+
+      <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">Split the bill</p>
+          <p class="process-body">Avoid awkward first date discussions and set expectations early by splitting the bill within the app itself.</p>
+        </div>
+      </div>
+
+      <div class="process-card fd-reveal fd-scale-up fd-delay-1">
+        <div class="process-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="process-title">Match and improve</p>
+          <p class="process-body">Hit it off? Upgrade your connections to genuine matches and unlock exclusive venues.</p>
+        </div>
+      </div>
+    </div>
+
+</div>
+      
+    </section>
+
+
+
+<section id="coming-section">
+  <div class="container venues-container">
+       <div class="section-header fd-reveal fd-fade-up">
+      <div class="section-eyebrow-pill">coming soon</div>
+      <h2 class="section-title">We'll be in your city soon</h2>
+      <p>Don't miss out when FateDate becomes avaiable. Sign up for early access and as soon as we role out close to you we'll let you know. Early users will get thje opportunity to provide feedback and help build our community.</p>
+      <div class="download-icons">
+        <div class="dowload-icon appstore"><img src="assets/appstore.svg"/></div>
+        <div class="dowload-icon playstore"><img src="assets/playstore.svg"/></div>
+      </div>
+      <a href="sign-up"><div class="cta cta-gradient gradient">Get early access</div></a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<script>
+/* ═══════════════════════════════════════
+   MOBILE NAV OVERLAY
+═══════════════════════════════════════ */
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var overlay   = document.getElementById('nav-overlay');
+  if (!hamburger || !overlay) return;
+
+  function openNav() {
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('nav-open');
+  }
+
+  function closeNav() {
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    document.body.classList.remove('nav-open');
+  }
+
+  hamburger.addEventListener('click', function() {
+    overlay.classList.contains('open') ? closeNav() : openNav();
+  });
+
+  // Close on link click
+  overlay.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', closeNav);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+
+/* ═══════════════════════════════════════
+   HEADER SCROLL STATE
+═══════════════════════════════════════ */
+(function() {
+  var header = document.getElementById('site-header');
+  if (!header) return;
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.pageYOffset > 40);
+  }, { passive: true });
+})();
+
+/* ═══════════════════════════════════════
+   SCROLL REVEAL — fd-reveal system
+═══════════════════════════════════════ */
+(function() {
+  var els = document.querySelectorAll('.fd-reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('fd-visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('fd-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+  els.forEach(function(el) { obs.observe(el); });
+})();
+
+/* ═══════════════════════════════════════
+   LOADER
+═══════════════════════════════════════ */
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loader').classList.add('hidden');
+  }, 2000);
+});
+
+
+/* ═══════════════════════════════════════
+   SCREEN CONFIG
+   Replace null with '/path/to/image.png' for real screens
+═══════════════════════════════════════ */
+var SCREENS = [
+  { img: 'assets/verify.png',  label: 'verify',        num: '01', bg1: '#0d0820', bg2: '#1a1040', accent: '#c9b8ff' },
+  { img: 'assets/connect.png', label: 'connection',    num: '02', bg1: '#0a0030', bg2: '#160055', accent: '#9b7dff' },
+  { img: 'assets/date.png',    label: 'go on a date',  num: '03', bg1: '#051a10', bg2: '#0a3020', accent: '#02A0AE' },
+  { img: 'assets/match.png',   label: 'make a match',  num: '04', bg1: '#120830', bg2: '#1e1050', accent: '#7B2EFD' },
+];
+
+
+
+
+var loadedImgs = SCREENS.map(function(s) {
+  if (!s.img) return null;
+  var im = new Image(); im.src = s.img; return im;
+});
+
+var canvas = document.getElementById('screen-canvas');
+var ctx    = canvas.getContext('2d');
+var CW     = canvas.width;
+var CH     = canvas.height;
+
+function drawScreen(idx) {
+  var s = SCREENS[idx], im = loadedImgs[idx];
+  if (im && im.complete && im.naturalWidth > 0) { ctx.drawImage(im, 0, 0, CW, CH); return; }
+
+  ctx.clearRect(0, 0, CW, CH);
+  var grad = ctx.createLinearGradient(0, 0, 0, CH);
+  grad.addColorStop(0, s.bg1); grad.addColorStop(1, s.bg2);
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, CW, CH);
+
+  var rg = ctx.createRadialGradient(CW/2, CH*0.45, 0, CW/2, CH*0.45, 280);
+  rg.addColorStop(0, s.accent + '60'); rg.addColorStop(1, 'transparent');
+  ctx.fillStyle = rg; ctx.fillRect(0, 0, CW, CH);
+
+  ctx.save(); ctx.globalAlpha = 0.1; ctx.fillStyle = s.accent;
+  ctx.font = 'bold 260px serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(s.num, CW/2, CH/2); ctx.restore();
+
+  ctx.save(); ctx.fillStyle = s.accent + '30'; ctx.beginPath();
+  ctx.roundRect ? ctx.roundRect(CW/2-110, CH/2-32, 220, 64, 32) : ctx.rect(CW/2-110, CH/2-32, 220, 64);
+  ctx.fill(); ctx.restore();
+
+  ctx.fillStyle = s.accent; ctx.font = 'bold 26px serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(s.label, CW/2, CH/2 - 6);
+  ctx.fillStyle = 'rgba(255,255,255,0.3)'; ctx.font = '16px sans-serif';
+  ctx.fillText('add your screenshot', CW/2, CH/2 + 38);
+
+  [-1,0,1].forEach(function(o) {
+    ctx.beginPath(); ctx.arc(CW/2+o*18, CH-50, o===0?6:4, 0, Math.PI*2);
+    ctx.fillStyle = o===0 ? s.accent : 'rgba(255,255,255,0.2)'; ctx.fill();
+  });
+}
+
+var firstImg = loadedImgs[0];
+if (firstImg) {
+  firstImg.onload = function() { drawScreen(0); };
+  if (firstImg.complete) drawScreen(0);
+} else {
+  drawScreen(0);
+}
+
+/* ═══════════════════════════════════════
+   SPIN ENGINE + TILT + AMBIENT + GLINT
+═══════════════════════════════════════ */
+var rotor        = document.getElementById('phone-rotor');
+var phoneScene   = document.getElementById('phone-scene');
+var phoneAmbient = document.getElementById('phone-ambient');
+var phoneGlint   = document.getElementById('phone-glint');
+var scrollSec    = document.getElementById('scroll-section');
+var allSteps     = document.querySelectorAll('.step');
+var dots         = document.querySelectorAll('.dot');
+var NUM_STEPS    = 4;
+scrollSec.style.setProperty('--steps', NUM_STEPS);
+
+var activeStep   = 0, rotDeg = 0, spinFrom = 0, spinTo = 0;
+var spinFrame    = 0, spinning = false, pendingIdx = 0, didSwap = false;
+var sceneTopPx   = 0, currentTopPx = 0;
+var SPIN_FRAMES  = 52;
+
+// Target tilt values (lerped in tick)
+var targetTiltX  = 0, targetTiltZ = 0;
+var currentTiltX = 0, currentTiltZ = 0;
+
+// Scroll progress within the section (0-1)
+var scrollProgress = 0;
+
+function easeInOut(t) { return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+function lerp(a, b, t) { return a + (b - a) * t; }
+
+// Hex to rgb helper
+function hexToRgb(hex) {
+  var r = parseInt(hex.slice(1,3),16);
+  var g = parseInt(hex.slice(3,5),16);
+  var b = parseInt(hex.slice(5,7),16);
+  return [r,g,b];
+}
+
+function updateAmbient(idx) {
+  var s = SCREENS[idx];
+  var rgb = hexToRgb(s.accent);
+  var col = 'rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+',0.28)';
+  var col2 = 'rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+',0.1)';
+  phoneAmbient.style.background =
+    'radial-gradient(ellipse at center, '+col+' 0%, '+col2+' 35%, transparent 70%)';
+
+  // Shift the big glow blobs colour too
+  var glowEl = document.querySelector('.glow-1');
+  if (glowEl) glowEl.style.background =
+    'radial-gradient(circle, rgba('+rgb[0]+','+rgb[1]+','+rgb[2]+',0.35) 0%, transparent 100%)';
+}
+
+function triggerGlint() {
+  phoneGlint.classList.remove('glint-active');
+  void phoneGlint.offsetWidth; // reflow to restart animation
+  phoneGlint.classList.add('glint-active');
+}
+
+function startSpin(toIdx) {
+  if (spinning) {
+    rotDeg = spinTo;
+    rotor.style.transform = buildRotorTransform(rotDeg);
+    if (!didSwap) { drawScreen(pendingIdx); updateAmbient(pendingIdx); }
+    spinning = false;
+  }
+  pendingIdx=toIdx; didSwap=false; spinFrom=rotDeg; spinTo=rotDeg+360; spinFrame=0; spinning=true;
+}
+
+function buildRotorTransform(ry) {
+  return 'rotateY('+ry+'deg)';
+}
+
+function activateStep(idx) {
+  if (idx===activeStep) return;
+  activeStep=idx;
+  allSteps.forEach(function(s){ s.classList.toggle('active', parseInt(s.dataset.step)===idx); });
+  dots.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
+  if (window._particleSetStep) window._particleSetStep(idx);
+  startSpin(idx);
+}
+
+var tickPaused = false;
+var tickObserver = new IntersectionObserver(function(entries) {
+  tickPaused = !entries[0].isIntersecting;
+}, { rootMargin: '200px 0px 200px 0px' });
+tickObserver.observe(scrollSec);
+
+function tick() {
+  requestAnimationFrame(tick);
+  if (tickPaused) return;
+
+  // Lerp scene vertical parallax
+  currentTopPx += (sceneTopPx - currentTopPx) * 0.055;
+  // Lerp tilt values
+  currentTiltX += (targetTiltX - currentTiltX) * 0.055;
+  currentTiltZ += (targetTiltZ - currentTiltZ) * 0.055;
+
+  // Compose phone-scene transform: translate + scale + tilt
+  var scale = 'scale(var(--phone-scale))';
+  var tiltTransform = 'translate(-50%, calc(-50% + '+currentTopPx.toFixed(2)+'px)) '
+    + 'rotateX('+currentTiltX.toFixed(2)+'deg) '
+    + 'rotateZ('+currentTiltZ.toFixed(2)+'deg)';
+
+  phoneScene.style.transform = tiltTransform + ' ' + scale;
+
+  if (!spinning) return;
+  spinFrame++;
+  var prog = Math.min(1, spinFrame/SPIN_FRAMES);
+  var eased = easeInOut(prog);
+  rotDeg = spinFrom + (spinTo-spinFrom)*eased;
+  if (!didSwap && (rotDeg-spinFrom)>=180) {
+    drawScreen(pendingIdx);
+    updateAmbient(pendingIdx);
+    didSwap=true;
+  }
+  rotor.style.transform = buildRotorTransform(rotDeg);
+  if (prog>=1) {
+    spinning=false;
+    rotDeg=spinTo;
+    rotor.style.transform=buildRotorTransform(rotDeg);
+    triggerGlint();
+  }
+}
+
+tick();
+
+// Initial ambient
+updateAmbient(0);
+
+window.addEventListener('scroll', function() {
+  var rect = scrollSec.getBoundingClientRect();
+  var sectionH = rect.height - window.innerHeight;
+  var p = Math.max(0, Math.min(1, -rect.top / sectionH));
+  // Show/hide particle canvas only while section is in view
+
+  var step = Math.min(NUM_STEPS-1, Math.floor(p*NUM_STEPS));
+  scrollProgress = p;
+
+  activateStep(step);
+
+  // Vertical parallax
+  sceneTopPx = (p - 0.5) * -80;
+
+  // Scroll-driven tilt: pitch forward as you scroll into section,
+  // then gradually settle. Per-step: slight forward tilt at entry, eases back.
+  var stepFrac = (p * NUM_STEPS) % 1; // 0-1 within current step
+  // Entry lean: tilt forward (positive X = top away), ease back to level
+  var entryTilt = Math.max(0, 1 - stepFrac * 2.5); // strong at 0, gone by 40%
+  targetTiltX = entryTilt * -6; // max -6deg pitch on entry
+  // Very subtle z-roll that oscillates per step
+  targetTiltZ = Math.sin(step * 0.8) * 1.8;
+
+}, { passive: true });
+
+/* ═══════════════════════════════════════
+   PARTICLE FIELD
+═══════════════════════════════════════ */
+(function() {
+  var pc = document.getElementById('particle-canvas');
+  if (!pc) return;
+  var pctx = pc.getContext('2d');
+  var W, H;
+  var particles = [];
+  var NUM_PARTICLES = 30; // reduced from 55
+  var currentAccent = [123, 46, 253];
+  var targetAccent  = [123, 46, 253];
+  var particlePaused = true; // start paused, IntersectionObserver enables it
+
+  var particleObserver = new IntersectionObserver(function(entries) {
+    particlePaused = !entries[0].isIntersecting;
+  }, { rootMargin: '100px 0px 100px 0px' });
+  particleObserver.observe(pc);
+
+  function resize() {
+    W = pc.width  = pc.offsetWidth;
+    H = pc.height = pc.offsetHeight;
+  }
+
+  function Particle() {
+    this.reset(true);
+  }
+  Particle.prototype.reset = function(init) {
+    this.x = Math.random() * (W || 800);
+    this.y = init ? Math.random() * (H || 600) : (Math.random() > 0.5 ? -10 : (H || 600) + 10);
+    this.r = Math.random() * 1.8 + 0.4;
+    this.vx = (Math.random() - 0.5) * 0.25;
+    this.vy = (Math.random() - 0.5) * 0.18 - 0.08;
+    this.alpha = Math.random() * 0.35 + 0.05;
+    this.life = 0;
+    this.maxLife = Math.random() * 400 + 200;
+  };
+
+  for (var i = 0; i < NUM_PARTICLES; i++) {
+    var p = new Particle();
+    particles.push(p);
+  }
+
+  function updateAccentColor(idx) {
+    var s = SCREENS[idx];
+    function hx(hex) {
+      return [parseInt(hex.slice(1,3),16), parseInt(hex.slice(3,5),16), parseInt(hex.slice(5,7),16)];
+    }
+    targetAccent = hx(s.accent);
+  }
+
+  // Expose so spin engine can call it
+  window._particleSetStep = updateAccentColor;
+
+  var frameCount = 0;
+  function animParticles() {
+    requestAnimationFrame(animParticles);
+    if (particlePaused) return;
+    frameCount++;
+
+    // Lerp accent colour
+    currentAccent[0] += (targetAccent[0] - currentAccent[0]) * 0.015;
+    currentAccent[1] += (targetAccent[1] - currentAccent[1]) * 0.015;
+    currentAccent[2] += (targetAccent[2] - currentAccent[2]) * 0.015;
+
+    pctx.clearRect(0, 0, W, H);
+
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life++;
+
+      // Fade in/out based on life
+      var lifeFrac = p.life / p.maxLife;
+      var a = p.alpha * Math.sin(lifeFrac * Math.PI);
+
+      // Twinkle
+      a *= (0.7 + 0.3 * Math.sin(frameCount * 0.04 + i));
+
+      if (p.life > p.maxLife || p.x < -20 || p.x > W+20 || p.y < -20 || p.y > H+20) {
+        p.reset(false);
+        continue;
+      }
+
+      var r = Math.round(currentAccent[0]);
+      var g = Math.round(currentAccent[1]);
+      var b = Math.round(currentAccent[2]);
+
+      pctx.beginPath();
+      pctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      pctx.fillStyle = 'rgba('+r+','+g+','+b+','+a.toFixed(3)+')';
+      pctx.fill();
+    }
+  }
+  animParticles();
+
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
+})();
+/* ═══════════════════════════════════════
+   CUSTOM CURSOR
+   Uses transform (not left/top) to avoid layout recalculation.
+   RAF loop only runs while cursor is moving, then self-suspends.
+═══════════════════════════════════════ */
+var cursorDot  = document.getElementById('cursor-dot');
+var cursorRing = document.getElementById('cursor-ring');
+var ringX = window.innerWidth/2, ringY = window.innerHeight/2;
+var dotX  = ringX, dotY = ringY;
+var ringRafId = null;
+
+// Position dot immediately on move — no lerp needed for the dot itself
+document.addEventListener('mousemove', function(e) {
+  dotX = e.clientX; dotY = e.clientY;
+  cursorDot.style.transform = 'translate(calc(' + dotX + 'px - 50%), calc(' + dotY + 'px - 50%))';
+  if (!ringRafId) ringRafId = requestAnimationFrame(animateRing);
+}, { passive: true });
+
+function animateRing() {
+  ringX += (dotX - ringX) * 0.12;
+  ringY += (dotY - ringY) * 0.12;
+  cursorRing.style.transform = 'translate(calc(' + ringX.toFixed(1) + 'px - 50%), calc(' + ringY.toFixed(1) + 'px - 50%))';
+  // Stop looping once ring has caught up — restarts on next mousemove
+  if (Math.abs(dotX - ringX) > 0.3 || Math.abs(dotY - ringY) > 0.3) {
+    ringRafId = requestAnimationFrame(animateRing);
+  } else {
+    ringRafId = null;
+  }
+}
+
+// Hover state — triggers on all interactive elements
+document.querySelectorAll('a, button, .perk-card, .safety-video-card, .cta').forEach(function(el) {
+  el.addEventListener('mouseenter', function() { document.body.classList.add('cursor-hover'); });
+  el.addEventListener('mouseleave', function() { document.body.classList.remove('cursor-hover'); });
+});
+
+/* ═══════════════════════════════════════
+   HERO — MOUSE PARALLAX + SCROLL PARALLAX
+═══════════════════════════════════════ */
+var heroOrb      = document.getElementById('hero-orb');
+var heroVidWrap  = document.getElementById('hero-video-wrap');
+var heroContainer = document.getElementById('hero-container');
+var heroVH = window.innerHeight;
+
+// Mouse — orb tracks cursor, video layer tilts subtly
+if (heroContainer) {
+  heroContainer.addEventListener('mousemove', function(e) {
+    var rect = heroContainer.getBoundingClientRect();
+    var mx = (e.clientX - rect.left) / rect.width;   // 0–1
+    var my = (e.clientY - rect.top)  / rect.height;  // 0–1
+
+    // Orb follows mouse — use transform to avoid layout recalculation
+    if (heroOrb) {
+      heroOrb.style.transform = 'translate(' + (e.clientX - 350) + 'px, ' + (e.clientY - rect.top - 350) + 'px)';
+    }
+
+    // Video layer shifts slightly opposite — creates depth
+    if (heroVidWrap) {
+      var tx = (mx - 0.5) * -10;
+      var ty = (my - 0.5) * -6;
+      heroVidWrap.style.transform = 'translate(' + tx + 'px, ' + ty + 'px)';
+    }
+  }, { passive: true });
+
+  heroContainer.addEventListener('mouseleave', function() {
+    if (heroVidWrap) heroVidWrap.style.transform = 'translate(0,0)';
+  });
+}
+
+// Scroll — video drifts down as you scroll (parallax)
+window.addEventListener('scroll', function() {
+  var sy = window.pageYOffset;
+  if (sy > heroVH) return;
+  if (heroVidWrap) {
+    heroVidWrap.style.transform = 'translateY(' + (sy * 0.3) + 'px)';
+  }
+}, { passive: true });
+
+/* ═══════════════════════════════════════
+   SCROLL-DRIVEN IMAGE CAROUSEL
+═══════════════════════════════════════ */
+(function() {
+  var wrap  = document.getElementById('img-carousel-wrap');
+  var track = document.getElementById('img-carousel-track');
+  if (!wrap || !track) return;
+
+  var DRAG     = 0.55; // how far it travels — increase to scroll further
+  var currentX = 0;
+  var targetX  = 0;
+  var rafId    = null;
+
+  function getProgress() {
+    var rect  = wrap.getBoundingClientRect();
+    var total = window.innerHeight + wrap.offsetHeight;
+    var passed = window.innerHeight - rect.top;
+    return Math.max(0, Math.min(1, passed / total));
+  }
+
+  function maxTravel() {
+    return (track.scrollWidth - wrap.offsetWidth) * DRAG;
+  }
+
+  function onScroll() {
+    targetX = -(getProgress() * maxTravel());
+    if (!rafId) rafId = requestAnimationFrame(loop);
+  }
+
+  function loop() {
+    rafId = null;
+    currentX += (targetX - currentX) * 0.08;
+    track.style.transform = 'translateX(' + currentX.toFixed(2) + 'px)';
+    if (Math.abs(targetX - currentX) > 0.1) {
+      rafId = requestAnimationFrame(loop);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer id="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+
+      <!-- Logo -->
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <img src="assets/logo.svg" alt="FateDate" />
+        </a>
+      </div>
+
+      <!-- Nav columns -->
+      <nav class="footer-nav">
+
+        <div class="footer-col">
+          <a href="/about">About</a>
+          <a href="/venues">Venues</a>
+          <a href="/sign-up">Download</a>
+          <a href="/press">Press</a>
+          <a href="/dating-laws">Dating laws</a>
+        </div>
+
+        <div class="footer-col">
+          <a href="#">TikTok</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Youtube</a>
+        </div>
+
+        <div class="footer-col">
+          <a href="mailto:hello@fatedate.com" class="footer-email"><span class="__cf_email__" data-cfemail="a0c8c5cccccfe0c6c1d4c5c4c1d4c58ec3cf8ed5cb">hello@fatedate.com</span></a>
+          <a href="/terms-codnitions">Terms &amp; conditions</a>
+          <a href="/privacy-policy">Privacy policy</a>
+          <a href="/safety">Safety tips</a>
+          <a href="/help">Help centre</a>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Ribbon + copyright bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright &copy; 2026 Fate Date. All rights reserved.</p>
+      <div class="footer-ribbon" aria-hidden="true">
+        <svg viewBox="0 0 700 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <path d="M20 90 C80 90 100 40 160 55 C220 70 230 100 290 85 C330 75 340 30 390 45 C430 58 435 95 480 80 C520 67 530 20 580 35 C620 47 640 88 690 75" stroke="white" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <!-- Signature loop -->
+          <path d="M300 75 C310 55 330 48 340 60 C350 72 342 88 328 82 C316 77 318 62 330 58 C345 53 360 70 355 85 C350 100 370 95 400 88" stroke="white" stroke
